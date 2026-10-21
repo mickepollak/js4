@@ -8,13 +8,7 @@ function sumEvenNumbers(arr) {
         if(arrValues[i] % 2 == 0) {
             console.log(`The number ${arrValues[i]} is even.`);
             sum = sum+arrValues[i];        
-        }
-
-        else {
-            continue; 
-            console.log(`The number ${arrValues[i]} is odd.`);
-        }
-
+     }
     };
 
      console.log(`The sum of even numbers is: ${sum}`);
