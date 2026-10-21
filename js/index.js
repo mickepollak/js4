@@ -1,22 +1,20 @@
-function isValidPassword(
-    username = document.getElementById("username").value,
-    password = document.getElementById("password").value
-) {
+const arrValues = [2,3,62,4,1,7,2,98,1,23,5,4,5,12];
+let sum = 0;
 
-    if (password.length < 8) {
-        console.log("Password must be at least 8 characters long.");
-        return false;
+for (let i = 0 ; i < arrValues.length;i++){
+
+    
+    //check if the number is even
+    if(arrValues[i] % 2 == 0) {
+        console.log(`The number ${arrValues[i]} is even.`);
+        sum = sum+arrValues[i];        
     }
-    else if (password.includes(" ")) {
-        console.log("Password cannot contain spaces.");
-        return false;
-    }
-    else if (username.length > 0 && password.includes(username)) {
-        console.log("Password cannot contain username.");
-        return false;
-    }
+
     else {
-        console.log("Password is valid.");
-        return true;
+        continue; 
+        console.log(`The number ${arrValues[i]} is odd.`);
     }
-}
+
+};
+
+console.log(`The sum of even numbers is: ${sum}`);
